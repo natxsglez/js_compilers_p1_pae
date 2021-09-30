@@ -1,0 +1,33 @@
+{
+  "name": "practica_1_nxsg",
+  "version": "1.0.0",
+  "description": "First practice for PAE class",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natxsglez/js_compilers_p1_pae.git"
+  },
+  "keywords": [
+    "practice",
+    "node",
+    "compilers"
+  ],
+  "author": "NXSG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natxsglez/js_compilers_p1_pae/issues"
+  },
+  "homepage": "https://github.com/natxsglez/js_compilers_p1_pae#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "sass": "^1.42.1"
+  }
+}
