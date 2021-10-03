@@ -1,0 +1,8 @@
+{
+    "include": ["typescript/**/*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "outDir": "dist"
+    }
+}

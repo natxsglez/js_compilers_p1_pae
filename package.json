@@ -6,7 +6,13 @@
   "scripts": {
     "test": "jest",
     "start": "node .",
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "build": "gulp",
+    "styles": "gulp styles",
+    "tsc": "gulp scripts",
+    "scripts:watch": "gulp scripts:watch",
+    "styles:watch": "gulp styles:watch",
+    "serve": "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -27,7 +33,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "nodemon": "^2.0.13",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "typescript": "^4.4.3"
   }
 }
