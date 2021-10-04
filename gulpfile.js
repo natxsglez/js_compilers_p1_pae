@@ -21,7 +21,7 @@ gulp.task('scripts:watch', gulp.series('scripts', function(done){
 }));
 
 gulp.task('styles:watch', gulp.series('styles', function(done){
-    gulp.watch('sass/**/*.scss', gulp.series('styles'));
+    gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
     done();
 }));
 

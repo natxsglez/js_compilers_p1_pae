@@ -12,11 +12,11 @@
         box-sizing: border-box;
         text-align: center;
         float: right;
-        min-height: 1px;
         border: solid 3px $border-color;
         background-color: $news-bg-color;
         padding-bottom: 100%;
         margin-bottom: -100%;
+        border-radius: 15px;
     }
 
     &::after {
@@ -24,16 +24,4 @@
         display: table;
         clear: both;
     }
-}
-
-@mixin col-half {
-    width: 50%;
-}
-
-@mixin col-quarter {
-    width: 25%;
-}
-
-@mixin col-eight {
-    width: 12.5%;
 }

@@ -9,11 +9,11 @@
   box-sizing: border-box;
   text-align: center;
   float: right;
-  min-height: 1px;
   border: solid 3px grey;
   background-color: #7e5489;
   padding-bottom: 100%;
   margin-bottom: -100%;
+  border-radius: 15px;
 }
 .grid::after {
   content: "";
@@ -21,10 +21,19 @@
   clear: both;
 }
 
+@font-face {
+  font-family: "ArcoPerpetuoRegular";
+  src: url("https://fontlibrary.org//face/arco-perpetuo");
+}
+.div {
+  font-family: "ArcoPerpetuoRegular";
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "ArcoPerpetuoRegular";
 }
 
 .container {
@@ -52,6 +61,7 @@ a {
 img {
   height: 100%;
   width: 100%;
+  border-radius: 15px;
 }
 
 h2 {
