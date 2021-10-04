@@ -1,0 +1,130 @@
+@use "sass:math";
+
+@import 'variables';
+@import 'grid';
+
+$max-cols: 12;
+$position: "top";
+$num-cols-list: 1,
+2,
+3,
+4,
+6,
+8,
+9,
+12;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.search {
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+a {
+    color: $link-color;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    color: $news-header-color;
+    width: 100%;
+}
+
+button {
+    color: $search-btn-letter;
+    background-color: $search-btn-color;
+}
+
+input,
+button {
+    padding: 6px 12px;
+    border: solid $border-color 1px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 6px;
+}
+
+input {
+    width: 600px;
+}
+
+p {
+    color: $p-color;
+}
+
+@function getWidth($cols) {
+    @return math.div($cols, $max-cols) * 100%;
+}
+
+.grid {
+    >div[class*=col-] {
+        float: left;
+        min-height: 1px;
+        height: max-content;
+        flex-shrink: 1;
+    }
+
+    >.col-#{$max-cols} {
+        width: 100%;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+
+@include tablet {
+    .grid {
+
+        // arreglo.forEach(item => {})
+        @each $size in $num-cols-list {
+            >.col-md-#{$size} {
+                width: getWidth($size);
+            }
+        }
+    }
+}
+
+@include desktop {
+    .grid {
+
+        // arreglo.forEach(item => {})
+        @each $size in $num-cols-list {
+            >.col-lg-#{$size} {
+                width: getWidth($size);
+            }
+        }
+    }
+}

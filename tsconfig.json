@@ -1,8 +1,9 @@
 {
-    "include": ["typescript/**/*.ts"],
+    "include": ["src/scripts/**/*.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"],
     "compilerOptions": {
-        "noImplicitAny": true,
-        "outDir": "dist"
+        "outDir": "scripts",
+        "target": "es6",
+        "moduleResolution":"node"
     }
 }

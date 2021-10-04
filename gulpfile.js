@@ -3,10 +3,9 @@ const sass = require('gulp-sass')(require('sass'));
 const tsc = require('gulp-typescript');
 
 gulp.task('styles', function(done){
-    return gulp.src('sass/**/*.scss')       //source
+    return gulp.src('src/sass/**/*.scss')    //source
         .pipe(sass())                       //transform
         .pipe(gulp.dest('assets/styles'));  //dest
-    done()
 });
 
 gulp.task('scripts', function(done){
@@ -17,7 +16,7 @@ gulp.task('scripts', function(done){
 })
 
 gulp.task('scripts:watch', gulp.series('scripts', function(done){
-    gulp.watch('typescript/**/*.ts', gulp.series('scripts'));
+    gulp.watch('src/scripts/**/*.ts', gulp.series('scripts'));
     done();
 }));
 

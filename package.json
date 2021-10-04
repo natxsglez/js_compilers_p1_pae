@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "start": "node .",
-    "dev": "nodemon .",
     "build": "gulp",
     "styles": "gulp styles",
     "tsc": "gulp scripts",
@@ -29,9 +28,7 @@
     "url": "https://github.com/natxsglez/js_compilers_p1_pae/issues"
   },
   "homepage": "https://github.com/natxsglez/js_compilers_p1_pae#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
